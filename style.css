@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:visited,
+a {
+  text-decoration: none;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: url(img/ws_Starry_Night_Sky_1920x1080.jpg) no-repeat fixed center;
+  transition: 0.5s ease-in-out;
+}
+.light{
+  background: url(img/3265126.jpg)no-repeat fixed center;
+}
+.container::-webkit-scrollbar {
+  width: 10px;
+  background-color: black;            /*-------------CAMBIAR MODO LIGHT--------*/
+}
+.container::-webkit-scrollbar-thumb {
+  background: rgb(61, 54, 54);
+  border-radius: 50px;
+}
+.container::-webkit-scrollbar-thumb:hover {
+  background: rgb(43, 41, 41);
+}
+
+/*-----HEADER NAV -----*/
+
+header {
+  background-color: transparent;
+  position: fixed;
+  color: white;
+  width: 100%;
+  margin-top: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+header img {
+  width: 50px;
+  margin: 0.5rem 3rem;
+}
+nav {
+  padding: 1rem 0;  
+}
+nav a {
+  margin: 0 0.5rem;
+  padding: 1rem 1rem;
+  border-radius: 1rem;  
+  transition: 0.4s ease-in-out all;
+}
+nav a:hover{
+  background-color: rgba(216, 219, 221, 0.623);
+  color: black;  
+  
+   
+}
+.switch{ 
+  background: rgb(59, 58, 58);
+  border-radius: 20rem;
+  border: none;
+  position: relative;
+  margin-right: 50px;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.switch-after{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.4s ease-in-out all;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.205);  
+}
+.switch-r{
+  left: unset;
+  right: 0;
+}
+.switch span{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff; 
+}
+.fa-sun{
+  opacity: 0;
+}
+.fa-moon{
+  opacity: 1;
+}
+.switch-s{
+  opacity: 1;
+}
+.switch-m{
+  opacity: 0;
+}
+.active{
+  background: orange;
+}
+
+/*-------- BODY ---------*/
+
+.container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.sec {
+  width: 100%;
+  height: 100vh;
+  padding-top: 4rem;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+/*-------MAIN -------*/
+
+.main {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+.text-container,
+.img-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.text-container{
+  z-index: 9;
+}
+
+/*----IZQ-SIDE text-container----*/
+
+
+h1 {  
+  font-family: "Roboto Mono", monospace, sans-serif;
+  font-size: 10vw;
+  transform: translate(0,-100px);
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.line{  
+  width: 30%;
+  height: 2px;
+  background: red;
+  margin-bottom: 1rem;
+}
+.l1{
+  margin-left: 5vw;
+  transform: translateX(20vw);
+  transition: 0.6s ease-in-out;
+}
+.l2{
+  margin-right: 5vw;
+  transform: translateX(-5vw);
+  transition: 0.8s ease-in-out;
+}
+.developer{
+  opacity: 0;
+  transform: translateY(150px)scale(0.5);
+  transition: 1.2s ease-in-out;
+}
+.visible{
+  opacity: 1;
+  transform: translate(0) scale(1);  
+}
+
+/*---- DER-SIDE IMG-Container ----*/
+
+.img-central{
+  position: relative;
+}
+.moon,
+.nube1,
+.nube2 {
+  width: 100vw;
+  position: absolute;
+  bottom: -30vw;
+  left: -30vw;
+}
+
+@media (max-width: 650px){
+  .line{
+    margin-bottom: 0.5rem;
+  }
+  .l1{
+    margin-left: 40px;
+  }
+  .l2{
+    margin-right: 40px;
+  }
+  .developer{
+    font-size: 1.3rem;
+  }
+}
+
+
