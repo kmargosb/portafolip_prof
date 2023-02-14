@@ -64,12 +64,13 @@ window.addEventListener("deviceorientation",function(event) {
   beta = Math.round(event.beta);
   gamma = Math.round(event.gamma);
 
-  document.body.style.backgroundPosition = beta / 10 + "px " + gamma / 10 + "px";
+  document.body.style.backgroundPosition = beta + "px " + gamma + "px";
   moon.style.transform =
-    "translate3d(" + beta / 3 + "px, " + gamma / 3 + "px, " + alpha + "px)";
+    "translate3d(" + beta / 30 + "px, " + gamma / 30 + "px, " + alpha + "px)";
   cloud1.style.transform =
-    "translate3d(" + beta / 3 + "px, " + gamma / 3 + "px, " + alpha + "px)";
+    "translate3d(" + beta + "px, " + gamma + "px, " + alpha + "px)";
   cloud2.style.transform =
     "translate3d(" + beta / 3 + "px, " + gamma / 3 + "px, " + alpha + "px)";
+
 
 }, true);

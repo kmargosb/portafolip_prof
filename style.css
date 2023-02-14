@@ -13,10 +13,11 @@ html {
 }
 body {
   background: url(img/ws_Starry_Night_Sky_1920x1080.jpg) no-repeat fixed center;
-  transition: 0.5s ease-in-out;
+  
 }
 .light{
   background: url(img/3265126.jpg)no-repeat fixed center;
+  transition: 0.5s;
 }
 .container::-webkit-scrollbar {
   width: 10px;
@@ -59,9 +60,7 @@ nav a {
 }
 nav a:hover{
   background-color: rgba(216, 219, 221, 0.623);
-  color: black;  
-  
-   
+  color: black;     
 }
 .switch{ 
   background: rgb(59, 58, 58);
