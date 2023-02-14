@@ -66,10 +66,10 @@ window.addEventListener("deviceorientation",function(event) {
 
   document.body.style.backgroundPosition = beta / 10000 + "px " + gamma / 50 + "px";
   moon.style.transform =
-    "translate3d(" + beta / 30 + "px, " + gamma / 30 + "px, " + z + "px)";
+    "translate3d(" + beta / 30 + "px, " + gamma / 30 + "px, " + alpha + "px)";
   cloud1.style.transform =
-    "translate3d(" + beta / 15 + "px, " + gamma / 10 + "px, " + z + "px)";
+    "translate3d(" + beta / 15 + "px, " + gamma / 10 + "px, " + alpha + "px)";
   cloud2.style.transform =
-    "translate3d(" + beta / 20 + "px, " + gamma / 20 + "px, " + z + "px)";
+    "translate3d(" + beta / 20 + "px, " + gamma / 20 + "px, " + alpha + "px)";
 
 }, true);
