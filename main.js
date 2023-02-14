@@ -11,11 +11,19 @@ const btnSun = document.querySelector(".fa-sun");
 const btnMoon = document.querySelector(".fa-moon");
 const menuBtn = document.querySelector('.menu-btn');
 const btnmenu = document.querySelector('.btnmenu')
+const contactBTN = document.getElementById('cont-btn');
+const mainBtn = document.getElementById('main-btn');
+const imgMoon = document.querySelector('.moon')
 
 
 menuBtn.addEventListener('click', () => {
+  btnmenu.classList.toggle("btnmenu")  
+})
+contactBTN.addEventListener('click', ()=> {
   btnmenu.classList.toggle("btnmenu")
-  
+})
+mainBtn.addEventListener('click', ()=> {
+  btnmenu.classList.toggle("btnmenu")
 })
 
 const cargarImagen = (entradas, observer) => {
@@ -62,9 +70,11 @@ document.onmousemove = function (e) {
 btnSwitch.addEventListener("click", () => {
   document.body.classList.toggle("light");
   btnSwitch.classList.toggle("active");
+  moon.classList.toggle('moon-off')
   btnSun.classList.toggle("switch-s");
   btnMoon.classList.toggle("switch-m");
   switchAfter.classList.toggle("switch-r");
+
 });
 
 window.addEventListener(

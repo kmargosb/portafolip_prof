@@ -216,7 +216,7 @@ h1 {
   width: 100vw;
   position: absolute;
   bottom: -30vw;
-  left: -30vw;
+  left: -30vw;  
 }
 .nube2{  
   opacity: 0.7;
@@ -225,6 +225,10 @@ h1 {
   top: 20px;
   left: -200px;
   opacity: 0.7;
+}
+.moon-off{
+  transition: 1s ease-in-out;
+  opacity: 0;  
 }
 
 @media (max-width: 750px){
