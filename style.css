@@ -13,11 +13,10 @@ html {
 }
 body {
   background: url(img/ws_Starry_Night_Sky_1920x1080.jpg) no-repeat fixed center;
-  
+  transition: 1s ease-in-out;
 }
 .light{
   background: url(img/3265126.jpg)no-repeat fixed center;
-  transition: 0.5s;
 }
 .container::-webkit-scrollbar {
   width: 10px;
@@ -38,12 +37,11 @@ header {
   position: fixed;
   color: white;
   width: 100%;
-  margin-top: 0.5rem;
-
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 10;
 }
 header img {
   width: 50px;
@@ -111,8 +109,23 @@ nav a:hover{
   opacity: 0;
 }
 .active{
-  background: orange;
+  background: rgb(236, 222, 143);
 }
+
+.menu-btn{
+  display: none;
+  position: fixed;
+  left: 40px;
+  top: 40px;
+
+  padding: 0 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 11;
+}
+
 
 /*-------- BODY ---------*/
 
@@ -204,6 +217,45 @@ h1 {
   position: absolute;
   bottom: -30vw;
   left: -30vw;
+}
+
+@media (max-width: 750px){
+
+  .menu-btn{
+    display: block;
+  }
+
+  header {
+    background-color: rgba(41, 32, 44, 0.952);
+    border-radius: 0 0 10rem 0;
+    flex-direction: column;
+    transition: 0.5s ease-in-out; 
+      
+  }
+  .btnmenu{
+    transform: translate(0, -900px);    
+  }
+
+  header img {
+    width: 100px;
+    margin: 1rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;      
+  }
+  nav a {
+    margin: 1rem;
+    text-align: center;  
+  }
+  nav a:hover{
+    background-color: rgba(216, 219, 221, 0.623);
+    color: black;     
+  }
+  .switch{       
+    margin: 1.5rem;
+  }
+
 }
 
 @media (max-width: 650px){

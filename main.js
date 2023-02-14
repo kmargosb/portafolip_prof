@@ -9,6 +9,14 @@ const btnSwitch = document.querySelector(".switch");
 const switchAfter = document.querySelector(".switch-after");
 const btnSun = document.querySelector(".fa-sun");
 const btnMoon = document.querySelector(".fa-moon");
+const menuBtn = document.querySelector('.menu-btn');
+const btnmenu = document.querySelector('.btnmenu')
+
+
+menuBtn.addEventListener('click', () => {
+  btnmenu.classList.toggle("btnmenu")
+  
+})
 
 const cargarImagen = (entradas, observer) => {
   // console.log(entradas);
@@ -42,7 +50,7 @@ document.onmousemove = function (e) {
   let y = -e.clientY;
   let z = 0;
 
-  document.body.style.backgroundPosition = x / 10000 + "px " + y / 50 + "px";
+  // document.body.style.backgroundPosition = x / 10000 + "px " + y / 50 + "px";
   moon.style.transform =
     "translate3d(" + x / 30 + "px, " + y / 30 + "px, " + z + "px)";
   cloud1.style.transform =
@@ -65,7 +73,6 @@ window.addEventListener(
     alpha = Math.round(event.alpha);
     beta = Math.round(event.beta);
     gamma = Math.round(event.gamma);
-
     
     moon.style.transform =
       "translate3d(" + gamma / 5 + "px, " + beta / 5 + "px, " + alpha + "px)";
@@ -74,5 +81,5 @@ window.addEventListener(
     cloud2.style.transform =
       "translate3d(" + gamma / 3 + "px, " + beta / 3 + "px, " + alpha + "px)";
   },
-  true
-);
+
+  true);
