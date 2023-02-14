@@ -56,8 +56,20 @@ btnSwitch.addEventListener('click', () => {
     btnSwitch.classList.toggle('active');
     btnSun.classList.toggle('switch-s');
     btnMoon.classList.toggle('switch-m');
-    switchAfter.classList.toggle('switch-r');
-    
-
-    
+    switchAfter.classList.toggle('switch-r');    
 });
+
+window.addEventListener("deviceorientation",function(event) {
+  alpha = Math.round(event.alpha);
+  beta = Math.round(event.beta);
+  gamma = Math.round(event.gamma);
+
+  document.body.style.backgroundPosition = beta / 10000 + "px " + gamma / 50 + "px";
+  moon.style.transform =
+    "translate3d(" + beta / 30 + "px, " + gamma / 30 + "px, " + z + "px)";
+  cloud1.style.transform =
+    "translate3d(" + beta / 15 + "px, " + gamma / 10 + "px, " + z + "px)";
+  cloud2.style.transform =
+    "translate3d(" + beta / 20 + "px, " + gamma / 20 + "px, " + z + "px)";
+
+}, true);
