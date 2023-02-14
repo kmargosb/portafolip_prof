@@ -68,11 +68,11 @@ window.addEventListener(
 
     
     moon.style.transform =
-      "translate3d(" + beta / 5 + "px, " + gamma / 5 + "px, " + alpha + "px)";
+      "translate3d(" + gamma / 5 + "px, " + beta / 5 + "px, " + alpha + "px)";
     cloud1.style.transform =
-      "translate3d(" + beta + "px, " + gamma + "px, " + alpha + "px)";
+      "translate3d(" + gamma + "px, " + beta + "px, " + alpha + "px)";
     cloud2.style.transform =
-      "translate3d(" + beta / 3 + "px, " + gamma / 3 + "px, " + alpha + "px)";
+      "translate3d(" + gamma / 3 + "px, " + beta / 3 + "px, " + alpha + "px)";
   },
   true
 );
