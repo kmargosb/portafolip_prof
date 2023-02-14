@@ -64,7 +64,7 @@ window.addEventListener("deviceorientation",function(event) {
   beta = Math.round(event.beta);
   gamma = Math.round(event.gamma);
 
-  document.body.style.backgroundPosition = beta + "px " + gamma + "px";
+  document.body.style.backgroundPosition = (beta / 1000) + "px " + (gamma / 1000) + "px";
   moon.style.transform =
     "translate3d(" + beta / 30 + "px, " + gamma / 30 + "px, " + alpha + "px)";
   cloud1.style.transform =
