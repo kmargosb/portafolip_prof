@@ -218,6 +218,14 @@ h1 {
   bottom: -30vw;
   left: -30vw;
 }
+.nube2{  
+  opacity: 0.7;
+}
+.nube1{
+  top: 20px;
+  left: -200px;
+  opacity: 0.7;
+}
 
 @media (max-width: 750px){
 
