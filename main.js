@@ -66,8 +66,7 @@ window.addEventListener(
     beta = Math.round(event.beta);
     gamma = Math.round(event.gamma);
 
-    document.body.style.backgroundPosition =
-      beta / 10000 + "px " + gamma / 10000 + "px";
+    
     moon.style.transform =
       "translate3d(" + beta / 5 + "px, " + gamma / 5 + "px, " + alpha + "px)";
     cloud1.style.transform =
