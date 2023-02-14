@@ -6,9 +6,9 @@ let line = document.querySelector(".l1");
 let line2 = document.querySelector(".l2");
 let developer = document.querySelector(".developer");
 const btnSwitch = document.querySelector(".switch");
-const switchAfter = document.querySelector('.switch-after')
-const btnSun = document.querySelector('.fa-sun');
-const btnMoon = document.querySelector('.fa-moon');
+const switchAfter = document.querySelector(".switch-after");
+const btnSun = document.querySelector(".fa-sun");
+const btnMoon = document.querySelector(".fa-moon");
 
 const cargarImagen = (entradas, observer) => {
   // console.log(entradas);
@@ -51,26 +51,29 @@ document.onmousemove = function (e) {
     "translate3d(" + x / 20 + "px, " + y / 20 + "px, " + z + "px)";
 };
 
-btnSwitch.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    btnSwitch.classList.toggle('active');
-    btnSun.classList.toggle('switch-s');
-    btnMoon.classList.toggle('switch-m');
-    switchAfter.classList.toggle('switch-r');    
+btnSwitch.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  btnSwitch.classList.toggle("active");
+  btnSun.classList.toggle("switch-s");
+  btnMoon.classList.toggle("switch-m");
+  switchAfter.classList.toggle("switch-r");
 });
 
-window.addEventListener("deviceorientation",function(event) {
-  alpha = Math.round(event.alpha);
-  beta = Math.round(event.beta);
-  gamma = Math.round(event.gamma);
+window.addEventListener(
+  "deviceorientation",
+  function (event) {
+    alpha = Math.round(event.alpha);
+    beta = Math.round(event.beta);
+    gamma = Math.round(event.gamma);
 
-  document.body.style.backgroundPosition = (beta / 1000) + "px " + (gamma / 1000) + "px";
-  moon.style.transform =
-    "translate3d(" + beta / 30 + "px, " + gamma / 30 + "px, " + alpha + "px)";
-  cloud1.style.transform =
-    "translate3d(" + beta + "px, " + gamma + "px, " + alpha + "px)";
-  cloud2.style.transform =
-    "translate3d(" + beta / 3 + "px, " + gamma / 3 + "px, " + alpha + "px)";
-
-
-}, true);
+    document.body.style.backgroundPosition =
+      beta / 10000 + "px " + gamma / 10000 + "px";
+    moon.style.transform =
+      "translate3d(" + beta / 5 + "px, " + gamma / 5 + "px, " + alpha + "px)";
+    cloud1.style.transform =
+      "translate3d(" + beta + "px, " + gamma + "px, " + alpha + "px)";
+    cloud2.style.transform =
+      "translate3d(" + beta / 3 + "px, " + gamma / 3 + "px, " + alpha + "px)";
+  },
+  true
+);
