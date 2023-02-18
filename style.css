@@ -15,12 +15,12 @@ body {
   background: url(img/ws_Starry_Night_Sky_1920x1080.jpg) no-repeat fixed center;
   transition: 1s ease-in-out;
 }
-.light{
-  background: url(img/3265126.jpg)no-repeat fixed center;
+.light {
+  background: url(img/3265126.jpg) no-repeat fixed center;
 }
 .container::-webkit-scrollbar {
   width: 10px;
-  background-color: black;            /*-------------CAMBIAR MODO LIGHT--------*/
+  background-color: black; /*-------------CAMBIAR MODO LIGHT--------*/
 }
 .container::-webkit-scrollbar-thumb {
   background: rgb(61, 54, 54);
@@ -37,7 +37,7 @@ header {
   position: fixed;
   color: white;
   width: 100%;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,19 +48,19 @@ header img {
   margin: 0.5rem 3rem;
 }
 nav {
-  padding: 1rem 0;  
+  padding: 1rem 0;
 }
 nav a {
   margin: 0 0.5rem;
   padding: 1rem 1rem;
-  border-radius: 1rem;  
+  border-radius: 1rem;
   transition: 0.4s ease-in-out all;
 }
-nav a:hover{
+nav a:hover {
   background-color: rgba(216, 219, 221, 0.623);
-  color: black;     
+  color: black;
 }
-.switch{ 
+.switch {
   background: rgb(59, 58, 58);
   border-radius: 20rem;
   border: none;
@@ -70,7 +70,7 @@ nav a:hover{
   display: flex;
   outline: none;
 }
-.switch-after{
+.switch-after {
   content: "";
   display: block;
   width: 30px;
@@ -82,37 +82,37 @@ nav a:hover{
   right: unset;
   border-radius: 100px;
   transition: 0.4s ease-in-out all;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.205);  
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.205);
 }
-.switch-r{
+.switch-r {
   left: unset;
   right: 0;
 }
-.switch span{
+.switch span {
   width: 30px;
   height: 30px;
   line-height: 30px;
   display: block;
   background: none;
-  color: #fff; 
+  color: #fff;
 }
-.fa-sun{
+.fa-sun {
   opacity: 0;
 }
-.fa-moon{
+.fa-moon {
   opacity: 1;
 }
-.switch-s{
+.switch-s {
   opacity: 1;
 }
-.switch-m{
+.switch-m {
   opacity: 0;
 }
-.active{
+.active {
   background: rgb(236, 222, 143);
 }
 
-.menu-btn{
+.menu-btn {
   display: none;
   position: fixed;
   left: 40px;
@@ -126,6 +126,41 @@ nav a:hover{
   z-index: 11;
 }
 
+.donate {
+  position: fixed;
+  bottom: 0;
+  right: 2rem;
+  z-index: 5;
+}
+.donate:hover {
+  cursor: pointer;
+}
+
+#Mano,
+#Billetera,
+#Agita {
+  animation: upDown 0.5s infinite;
+}
+#Boronas {
+  animation: borona 1s infinite;
+}
+
+@keyframes upDown {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+@keyframes borona {
+  from {
+    transform: translateY(-45px);
+  }
+  to {
+    transform: translateY(60px);
+  }
+}
 
 /*-------- BODY ---------*/
 
@@ -165,49 +200,48 @@ nav a:hover{
   align-items: center;
   flex-wrap: nowrap;
 }
-.text-container{
+.text-container {
   z-index: 9;
 }
 
 /*----IZQ-SIDE text-container----*/
 
-
-h1 {  
+h1 {
   font-family: "Roboto Mono", monospace, sans-serif;
   font-size: 10vw;
-  transform: translate(0,-100px);
+  transform: translate(0, -100px);
   opacity: 0;
   transition: 0.4s ease-in-out;
 }
-.line{  
+.line {
   width: 30%;
   height: 2px;
   background: red;
   margin-bottom: 1rem;
 }
-.l1{
+.l1 {
   margin-left: 5vw;
   transform: translateX(20vw);
   transition: 0.6s ease-in-out;
 }
-.l2{
+.l2 {
   margin-right: 5vw;
   transform: translateX(-5vw);
   transition: 0.8s ease-in-out;
 }
-.developer{
+.developer {
   opacity: 0;
-  transform: translateY(150px)scale(0.5);
+  transform: translateY(150px) scale(0.5);
   transition: 1.2s ease-in-out;
 }
-.visible{
+.visible {
   opacity: 1;
-  transform: translate(0) scale(1);  
+  transform: translate(0) scale(1);
 }
 
 /*---- DER-SIDE IMG-Container ----*/
 
-.img-central{
+.img-central {
   position: relative;
 }
 .moon,
@@ -216,24 +250,23 @@ h1 {
   width: 100vw;
   position: absolute;
   bottom: -30vw;
-  left: -30vw;  
+  left: -30vw;
 }
-.nube2{  
+.nube2 {
   opacity: 0.7;
 }
-.nube1{
+.nube1 {
   top: 20px;
   left: -200px;
   opacity: 0.7;
 }
-.moon-off{
+.moon-off {
   transition: 1s ease-in-out;
-  opacity: 0;  
+  opacity: 0;
 }
 
-@media (max-width: 750px){
-
-  .menu-btn{
+@media (max-width: 750px) {
+  .menu-btn {
     display: block;
   }
 
@@ -241,11 +274,10 @@ h1 {
     background-color: rgba(41, 32, 44, 0.952);
     border-radius: 0 0 10rem 0;
     flex-direction: column;
-    transition: 0.5s ease-in-out; 
-      
+    transition: 0.5s ease-in-out;
   }
-  .btnmenu{
-    transform: translate(0, -900px);    
+  .btnmenu {
+    transform: translate(0, -900px);
   }
 
   header img {
@@ -254,35 +286,32 @@ h1 {
   }
   nav {
     display: flex;
-    flex-direction: column;      
+    flex-direction: column;
   }
   nav a {
     margin: 1rem;
-    text-align: center;  
+    text-align: center;
   }
-  nav a:hover{
+  nav a:hover {
     background-color: rgba(216, 219, 221, 0.623);
-    color: black;     
+    color: black;
   }
-  .switch{       
+  .switch {
     margin: 1.5rem;
   }
-
 }
 
-@media (max-width: 650px){
-  .line{
+@media (max-width: 650px) {
+  .line {
     margin-bottom: 0.5rem;
   }
-  .l1{
+  .l1 {
     margin-left: 40px;
   }
-  .l2{
+  .l2 {
     margin-right: 40px;
   }
-  .developer{
+  .developer {
     font-size: 1.3rem;
   }
 }
-
-
